@@ -2,37 +2,105 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the primary assumption behind the Naive Bayes classifier?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Features are dependent on each other",
+        "b": "Features are independent given the class",
+        "c": "It requires a large amount of training data",
+        "d": "It does not use probabilities"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Naive Bayes assumes independence between features, making this incorrect.",
+        "b": "Correct! Naive Bayes assumes that features are independent given the class label.",
+        "c": "Naive Bayes performs well even with small datasets, so this is incorrect.",
+        "d": "Naive Bayes is a probabilistic classifier, making this statement false."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which preprocessing step is NOT typically required before training a Naive Bayes model on text data?",
+      "answers": {
+        "a": "Removing punctuation",
+        "b": "Converting text to lowercase",
+        "c": "Sorting words alphabetically",
+        "d": "Removing stopwords"
+      },
+      "explanations": {
+        "a": "Removing punctuation helps standardize text.",
+        "b": "Lowercasing ensures consistency in word comparison.",
+        "c": "Correct! Sorting words alphabetically has no impact on classification.",
+        "d": "Removing stopwords helps reduce noise in text data."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why do we split the dataset into training and testing sets?",
+      "answers": {
+        "a": "To improve model accuracy by training on more data",
+        "b": "To evaluate how well the model generalizes to new data",
+        "c": "To remove incorrect labels from the dataset",
+        "d": "To increase the number of features"
+      },
+      "explanations": {
+        "a": "While more training data can improve accuracy, testing data is needed to check generalization.",
+        "b": "Correct! A test set helps assess how well the model performs on unseen data.",
+        "c": "The dataset split does not modify labels.",
+        "d": "Splitting the dataset does not affect the number of features."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What does the probability calculation in Naive Bayes depend on?",
+      "answers": {
+        "a": "The frequency of words in a given class",
+        "b": "The order of words in a sentence",
+        "c": "The length of the review",
+        "d": "The number of punctuation marks"
+      },
+      "explanations": {
+        "a": "Correct! Naive Bayes calculates probabilities based on word frequency within each class.",
+        "b": "Naive Bayes does not consider word order.",
+        "c": "Sentence length does not directly impact probability calculations in Naive Bayes.",
+        "d": "Punctuation marks are usually removed during preprocessing."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which of the following evaluation metrics is NOT used to assess a sentiment analysis model?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Accuracy",
+        "b": "Precision",
+        "c": "Recall",
+        "d": "Execution speed"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Accuracy is a standard metric for classification tasks.",
+        "b": "Precision measures how many predicted positives are correct.",
+        "c": "Recall measures how many actual positives were correctly identified.",
+        "d": "Correct! Execution speed is not an evaluation metric for model performance."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If a Naive Bayes classifier predicts a negative review as positive, what type of error is this?",
+      "answers": {
+        "a": "True Positive",
+        "b": "False Positive",
+        "c": "False Negative",
+        "d": "True Negative"
+      },
+      "explanations": {
+        "a": "True Positive means a correctly classified positive review.",
+        "b": "Correct! A False Positive means the model incorrectly predicted a negative review as positive.",
+        "c": "False Negative means a positive review was classified as negative.",
+        "d": "True Negative means a correctly classified negative review."
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]

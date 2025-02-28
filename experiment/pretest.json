@@ -2,37 +2,105 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is sentiment analysis?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "A method to analyze numerical data",
+        "b": "A technique to determine the emotional tone of text",
+        "c": "A way to translate languages",
+        "d": "A process to detect plagiarism"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Sentiment analysis focuses on text, not numerical data.",
+        "b": "Correct! Sentiment analysis determines whether text expresses positive, negative, or neutral emotions.",
+        "c": "Translation is not related to sentiment analysis.",
+        "d": "Plagiarism detection does not involve sentiment analysis."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is an example of a negative sentiment?",
+      "answers": {
+        "a": "This movie was fantastic!",
+        "b": "The product quality is terrible.",
+        "c": "I love this song!",
+        "d": "This book is amazing."
+      },
+      "explanations": {
+        "a": "This expresses a positive sentiment.",
+        "b": "Correct! 'Terrible' indicates a negative sentiment.",
+        "c": "This expresses a positive sentiment.",
+        "d": "This expresses a positive sentiment."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is a classifier in machine learning?",
+      "answers": {
+        "a": "A function that sorts numbers in ascending order",
+        "b": "A model that assigns labels to data",
+        "c": "A tool for creating datasets",
+        "d": "A method for storing data"
+      },
+      "explanations": {
+        "a": "Sorting numbers is unrelated to classification.",
+        "b": "Correct! A classifier assigns labels to data points based on learned patterns.",
+        "c": "A classifier does not create datasets.",
+        "d": "Storing data is different from classification."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is a common step in text preprocessing?",
+      "answers": {
+        "a": "Adding more punctuation",
+        "b": "Removing stopwords",
+        "c": "Translating text to another language",
+        "d": "Randomly shuffling the words in a sentence"
+      },
+      "explanations": {
+        "a": "Punctuation is often removed, not added.",
+        "b": "Correct! Stopwords like 'the' and 'is' are removed to improve text analysis.",
+        "c": "Translation is not a standard preprocessing step.",
+        "d": "Shuffling words would change the meaning of the text."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which algorithm is commonly used for text classification tasks?",
+      "answers": {
+        "a": "Naive Bayes",
+        "b": "K-Means Clustering",
+        "c": "Dijkstra’s Algorithm",
+        "d": "Bubble Sort"
+      },
+      "explanations": {
+        "a": "Correct! Naive Bayes is widely used for text classification.",
+        "b": "K-Means is used for clustering, not classification.",
+        "c": "Dijkstra’s Algorithm is for shortest path problems, not classification.",
+        "d": "Bubble Sort is a sorting algorithm, not a classifier."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Why is it important to split data into training and testing sets?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To make the dataset smaller",
+        "b": "To evaluate how well the model performs on new data",
+        "c": "To ensure the model memorizes all training data",
+        "d": "To increase the dataset size"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Splitting the dataset is not for reducing size.",
+        "b": "Correct! A test set helps check how well the model generalizes to unseen data.",
+        "c": "A good model should generalize, not memorize.",
+        "d": "Splitting does not increase the dataset size."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]

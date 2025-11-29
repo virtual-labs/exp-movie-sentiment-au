@@ -2,103 +2,103 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What is the primary assumption behind the Naive Bayes classifier?",
+      "question": "What does the expression P(C|X) represent in the Naive Bayes classifier?",
       "answers": {
-        "a": "Features are dependent on each other",
-        "b": "Features are independent given the class",
-        "c": "It requires a large amount of training data",
-        "d": "It does not use probabilities"
+        "a": "The probability of observing the words X in any document",
+        "b": "The probability of class C occurring in the dataset",
+        "c": "The probability that the review X belongs to class C",
+        "d": "The exact count of words in class C"
       },
       "explanations": {
-        "a": "Naive Bayes assumes independence between features, making this incorrect.",
-        "b": "Correct! Naive Bayes assumes that features are independent given the class label.",
-        "c": "Naive Bayes performs well even with small datasets, so this is incorrect.",
-        "d": "Naive Bayes is a probabilistic classifier, making this statement false."
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "Which preprocessing step is NOT typically required before training a Naive Bayes model on text data?",
-      "answers": {
-        "a": "Removing punctuation",
-        "b": "Converting text to lowercase",
-        "c": "Sorting words alphabetically",
-        "d": "Removing stopwords"
-      },
-      "explanations": {
-        "a": "Removing punctuation helps standardize text.",
-        "b": "Lowercasing ensures consistency in word comparison.",
-        "c": "Correct! Sorting words alphabetically has no impact on classification.",
-        "d": "Removing stopwords helps reduce noise in text data."
+        "a": "This describes P(X), which is not the classifier's goal.",
+        "b": "This refers to the prior probability P(C), not P(C|X).",
+        "c": "Correct! It is the posterior probability of class C given the review X.",
+        "d": "Naive Bayes uses probability, not word count alone."
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     },
     {
-      "question": "Why do we split the dataset into training and testing sets?",
+      "question": "Which of the following best explains why Naive Bayes multiplies the probabilities of individual words?",
       "answers": {
-        "a": "To improve model accuracy by training on more data",
-        "b": "To evaluate how well the model generalizes to new data",
-        "c": "To remove incorrect labels from the dataset",
-        "d": "To increase the number of features"
+        "a": "Because each word increases the dataset size",
+        "b": "Because of the conditional independence assumption",
+        "c": "Because it improves vocabulary coverage",
+        "d": "Because multiplying probabilities improves accuracy automatically"
       },
       "explanations": {
-        "a": "While more training data can improve accuracy, testing data is needed to check generalization.",
-        "b": "Correct! A test set helps assess how well the model performs on unseen data.",
-        "c": "The dataset split does not modify labels.",
-        "d": "Splitting the dataset does not affect the number of features."
+        "a": "Dataset size is unrelated to probability calculation.",
+        "b": "Correct! Naive Bayes assumes words are independent given the class, enabling multiplication.",
+        "c": "Vocabulary coverage is unrelated to multiplication.",
+        "d": "Multiplication is mathematically required, not for automatic accuracy."
       },
       "correctAnswer": "b",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     },
     {
-      "question": "What does the probability calculation in Naive Bayes depend on?",
+      "question": "What problem does Laplace smoothing specifically solve in Naive Bayes?",
       "answers": {
-        "a": "The frequency of words in a given class",
-        "b": "The order of words in a sentence",
-        "c": "The length of the review",
-        "d": "The number of punctuation marks"
+        "a": "Preventing underflow when multiplying many probabilities",
+        "b": "Assigning a non-zero probability to words not seen in the training data",
+        "c": "Ensuring all classes have equal probability",
+        "d": "Reducing the total number of features"
       },
       "explanations": {
-        "a": "Correct! Naive Bayes calculates probabilities based on word frequency within each class.",
-        "b": "Naive Bayes does not consider word order.",
-        "c": "Sentence length does not directly impact probability calculations in Naive Bayes.",
-        "d": "Punctuation marks are usually removed during preprocessing."
+        "a": "Using log probabilities solves underflow, not Laplace smoothing.",
+        "b": "Correct! Laplace smoothing prevents zero probability for unseen words.",
+        "c": "Class balancing is unrelated to smoothing.",
+        "d": "Laplace smoothing does not change the feature count."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Why are log probabilities used instead of direct multiplication in Naive Bayes?",
+      "answers": {
+        "a": "To simplify the model by removing all probabilities",
+        "b": "To convert classification into a clustering problem",
+        "c": "To avoid extremely small values that occur during probability multiplication",
+        "d": "To increase the overall classification speed"
+      },
+      "explanations": {
+        "a": "Log does not remove probabilities.",
+        "b": "Classification and clustering are unrelated processes.",
+        "c": "Correct! Log transformation prevents numerical underflow from small probabilities.",
+        "d": "Speed improvement is not the primary purpose."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which preprocessing step most directly improves Naive Bayes’ ability to analyze sentiment?",
+      "answers": {
+        "a": "Removing stopwords to reduce noisy, non-informative words",
+        "b": "Alphabetically sorting every sentence",
+        "c": "Using emojis to replace all punctuation",
+        "d": "Increasing the number of capital letters"
+      },
+      "explanations": {
+        "a": "Correct! Removing stopwords improves signal-to-noise ratio.",
+        "b": "Sorting words changes meaning and has no value.",
+        "c": "Emoji substitution is not standard preprocessing.",
+        "d": "Capitalization does not impact classification."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "Which of the following evaluation metrics is NOT used to assess a sentiment analysis model?",
-      "answers": {
-        "a": "Accuracy",
-        "b": "Precision",
-        "c": "Recall",
-        "d": "Execution speed"
-      },
-      "explanations": {
-        "a": "Accuracy is a standard metric for classification tasks.",
-        "b": "Precision measures how many predicted positives are correct.",
-        "c": "Recall measures how many actual positives were correctly identified.",
-        "d": "Correct! Execution speed is not an evaluation metric for model performance."
-      },
-      "correctAnswer": "d",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "If a Naive Bayes classifier predicts a negative review as positive, what type of error is this?",
+      "question": "If the model predicts a negative review correctly, which term describes this outcome?",
       "answers": {
         "a": "True Positive",
-        "b": "False Positive",
-        "c": "False Negative",
-        "d": "True Negative"
+        "b": "True Negative",
+        "c": "False Positive",
+        "d": "False Negative"
       },
       "explanations": {
-        "a": "True Positive means a correctly classified positive review.",
-        "b": "Correct! A False Positive means the model incorrectly predicted a negative review as positive.",
-        "c": "False Negative means a positive review was classified as negative.",
-        "d": "True Negative means a correctly classified negative review."
+        "a": "True Positive refers to correctly predicting a positive review.",
+        "b": "Correct! True Negative means the model correctly predicted a negative review.",
+        "c": "A False Positive means a negative review was predicted as positive.",
+        "d": "A False Negative means a positive review was predicted as negative."
       },
       "correctAnswer": "b",
       "difficulty": "beginner"

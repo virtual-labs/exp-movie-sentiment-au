@@ -1,1 +1,4 @@
-### Link your references in here
+- [Naive Bayes Classifiers – GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/naive-bayes-classifiers/)  
+- [Naive Bayes Algorithm – TutorialsPoint](https://www.tutorialspoint.com/machine_learning/machine_learning_naive_bayes_algorithms.htm)  
+- [Building Naive Bayes Classifier from Scratch for Sentiment Analysis – Analytics Vidhya](https://www.analyticsvidhya.com/blog/2022/03/building-naive-bayes-classifier-from-scratch-to-perform-sentiment-analysis/)  
+- [Sentiment Analysis with Naive Bayes on Movie Reviews – Dataquest Tutorial](https://www.dataquest.io/blog/naive-bayes-tutorial/)  

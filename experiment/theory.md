@@ -22,10 +22,10 @@
 $$ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} $$
 
 <ul>
-  <li><b>P(A|B)</b> → Posterior probability of class A given feature B</li>
-  <li><b>P(B|A)</b> → Likelihood: probability of feature B given class A</li>
-  <li><b>P(A)</b> → Prior probability of class A</li>
-  <li><b>P(B)</b> → Evidence: probability of feature B</li>
+  <li><strong>P(A|B)</strong> → Posterior probability of class A given feature B</li>
+  <li><strong>P(B|A)</strong> → Likelihood: probability of feature B given class A</li>
+  <li><strong>P(A)</strong> → Prior probability of class A</li>
+  <li><strong>P(B)</strong> → Evidence: probability of feature B</li>
 </ul>
 
 <h5>3.2 Why is it Called "Naive"?</h5>
@@ -33,17 +33,17 @@ $$ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} $$
 
 <h5>3.3 Mathematical Formulation of Naive Bayes for Sentiment Analysis</h5>
 
-<p>Given a document (review) <i>X</i> with words \( w_1, w_2, ..., w_n \), we want to find the most probable class <i>C</i> (Positive or Negative):</p>
+<p>Given a document (review) <em>X</em> with words \(w_1, w_2, \dots, w_n\), we want to find the most probable class <em>C</em> (Positive or Negative):</p>
 
 $$ P(C|X) = \frac{P(X|C) \cdot P(C)}{P(X)} $$
 
-Since \( P(X) \) is constant across classes, we only need to maximize:
+Since \(P(X)\) is constant across classes, we only need to maximize:
 
 $$ P(C|X) \propto P(C) \cdot P(X|C) $$
 
 Under the <strong>naive independence assumption</strong>:
 
-$$ P(X|C) = P(w_1, w_2, \dots, w_n | C) = \prod_{i=1}^{n} P(w_i | C) $$
+$$ P(X|C) = \prod_{i=1}^{n} P(w_i | C) $$
 
 So the final scoring function becomes:
 
@@ -52,9 +52,9 @@ $$ P(C|X) \propto P(C) \cdot \prod_{i=1}^{n} P(w_i | C) $$
 <h5>Laplace (Add-One) Smoothing</h5>
 <p>To avoid zero probabilities for unseen words:</p>
 
-$$ P(w_i | C) = \frac{\text{count}(w_i, C) + 1}{\text{total words in } C + |V|} $$
+$$ P(w_i | C) = \frac{\operatorname{count}(w_i, C) + 1}{\operatorname{total\ words\ in}\ C + |V|} $$
 
-where \( |V| \) = vocabulary size.
+where \(|V|\) = vocabulary size.
 
 <h5>Log Probabilities (for Numerical Stability)</h5>
 <p>Instead of multiplying many small probabilities (risking underflow), we use logarithms:</p>
@@ -70,10 +70,10 @@ We classify the review to the class with the highest log probability.
 
 <h5>Step 2: Preprocess the Data</h5>
 <ul>
-  <li><b>Convert to lowercase</b></li>
-  <li><b>Remove punctuation and special characters</b></li>
-  <li><b>Remove stopwords</b> (e.g., "the", "is", "and")</li>
-  <li><b>Tokenization</b> – split text into words</li>
+  <li><strong>Convert to lowercase</strong></li>
+  <li><strong>Remove punctuation and special characters</strong></li>
+  <li><strong>Remove stopwords</strong> (e.g., "the", "is", "and")</li>
+  <li><strong>Tokenization</strong> – split text into words</li>
   <li>(Optional) Stemming/Lemmatization</li>
 </ul>
 
@@ -82,8 +82,8 @@ We classify the review to the class with the highest log probability.
 
 <h5>Step 4: Train the Naive Bayes Model</h5>
 <ul>
-  <li>Compute prior: \( P(C) = \frac{\text{# documents in class C}}{\text{total documents}} \)</li>
-  <li>Compute likelihoods \( P(w_i | C) \) with Laplace smoothing</li>
+  <li>Compute prior: $$ P(C) = \frac{\#\ \text{documents in class}\ C}{\text{total documents}} $$</li>
+  <li>Compute likelihoods \(P(w_i | C)\) with Laplace smoothing</li>
 </ul>
 
 <h5>Step 5: Classify New Reviews</h5>
@@ -91,8 +91,8 @@ We classify the review to the class with the highest log probability.
 
 <h5>Step 6: Evaluate Model Performance</h5>
 <ul>
-  <li><b>Accuracy</b></li>
-  <li><b>Precision, Recall, F1-score</b> (especially important for imbalanced datasets)</li>
+  <li><strong>Accuracy</strong></li>
+  <li><strong>Precision, Recall, F1-score</strong> (especially important for imbalanced datasets)</li>
   <li>Confusion matrix</li>
 </ul>
 

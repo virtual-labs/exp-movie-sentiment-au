@@ -1,8 +1,9 @@
-### Procedure
+
 <h5>Step 1: Upload the Dataset</h5>
-<p>Start by uploading the movie reviews dataset with sentiment labels. This dataset will be used for training and testing the Naive Bayes classifier.</p>
+<p>Start by downloading the sample dataset and then upload it using the "Upload Dataset" button. This dataset will be used for training and testing the Naive Bayes classifier.</p>
+
 <img src="./images/step1.png" alt="Description of image">
-<p>Click the <strong>Next</strong> button to proceed to the Data Preprocessing step.</p>
+<p>After the dataset preview is displayed, click <strong>Next → Start Sentiment Analysis</strong> to proceed to the Data Preprocessing step.</p>
 <img src="./images/step2.png" alt="Description of image">
 <h5>Step 2: Data Preprocessing</h5>
 <p>Prepare the text data by applying preprocessing steps like removing stopwords, converting text to lowercase, removing special characters, and tokenization.</p>

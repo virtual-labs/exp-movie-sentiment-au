@@ -1,2 +1,1 @@
-### Aim of the experiment
-<p>To  understand how Naive Bayes can be used for sentiment analysis by classifying movie reviews as positive or negative. They will learn key steps such as data preprocessing, model training, and evaluation. The concept also covers performance metrics like accuracy, precision, recall, and F1-score.</p>
+To understand how the Naïve Bayes algorithm can be applied for sentiment analysis by classifying movie reviews as positive or negative. Learners will explore the key steps involved, including data preprocessing, model training, and model evaluation. The aim also includes understanding performance metrics such as accuracy, precision, recall, and F1-score to assess the effectiveness of the classifier.

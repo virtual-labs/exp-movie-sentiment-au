@@ -17,8 +17,9 @@
 <h5>3.1 Bayes' Theorem</h5>
 <p>Bayes' Theorem describes the probability of an event occurring based on prior knowledge of related conditions.</p>
 
-**Formula:**
-$$ P(A \mid B) = \frac{P(B \mid A) \, P(A)}{P(B)} $$
+**Formula:**  
+P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
+
 <ul>
   <li><strong>P(A|B)</strong> → Posterior probability of class A given feature B</li>
   <li><strong>P(B|A)</strong> → Likelihood: probability of feature B given class A</li>
@@ -31,33 +32,33 @@ $$ P(A \mid B) = \frac{P(B \mid A) \, P(A)}{P(B)} $$
 
 <h5>3.3 Mathematical Formulation of Naive Bayes for Sentiment Analysis</h5>
 
-<p>Given a document (review) <49> with words \( w_1, w_2, \dots, w_n \), we want to find the most probable class <em>C</em> (Positive or Negative):</p>
+<p>Given a document (review) X with words w₁, w₂, …, wₙ, we want to find the most probable class C (Positive or Negative):</p>
 
-$$ P(C|X) = \frac{P(X|C) \cdot P(C)}{P(X)} $$
+P(C|X) = \frac{P(X|C) \cdot P(C)}{P(X)}
 
-Since \( P(X) \) is constant across classes, we only need to maximize:
+Since P(X) is constant across classes, we only need to maximize:
 
-$$ P(C|X) \propto P(C) \cdot P(X|C) $$
+P(C|X) ∝ P(C) \cdot P(X|C)
 
 Under the <strong>naive independence assumption</strong>:
 
-$$ P(X|C) = \prod_{i=1}^{n} P(w_i | C) $$
+P(X|C) = \prod_{i=1}^{n} P(w_i|C)
 
 So the final scoring function becomes:
 
-$$ P(C|X) \propto P(C) \cdot \prod_{i=1}^{n} P(w_i | C) $$
+P(C|X) ∝ P(C) \cdot \prod_{i=1}^{n} P(w_i|C)
 
 <h5>Laplace (Add-One) Smoothing</h5>
 <p>To avoid zero probabilities for unseen words:</p>
 
-$$ P(w_i | C) = \frac{\operatorname{count}(w_i, C) + 1}{\operatorname{total\ words\ in}\ C + |V|} $$
+P(w_i|C) = \frac{count(w_i, C) + 1}{total words in class C + |V|}
 
-where \( |V| \) = vocabulary size.
+where |V| = vocabulary size.
 
 <h5>Log Probabilities (for Numerical Stability)</h5>
 <p>Instead of multiplying many small probabilities (risking underflow), we use logarithms:</p>
 
-$$ \log P(C|X) = \log P(C) + \sum_{i=1}^{n} \log P(w_i | C) $$
+log P(C|X) = log P(C) + \sum_{i=1}^{n} log P(w_i|C)
 
 We classify the review to the class with the highest log probability.
 
@@ -68,20 +69,19 @@ We classify the review to the class with the highest log probability.
 
 <h5>Step 2: Preprocess the Data</h5>
 <ul>
-  <li><strong>Convert to lowercase</strong></li>
-  <li><strong>Remove punctuation and special characters</strong></li>
-  <li><strong>Remove stopwords</strong> (e.g., "the", "is", "and")</li>
-  <li><strong>Tokenization</strong> – split text into words</li>
-  <li>(Optional) Stemming/Lemmatization</li>
-</ul>
+  <li><strong>Convert to lowercase</li>
+  <li>Remove punctuation and special characters</li>
+  <li>Remove stopwords (e.g., "the", "is", "and")</li>
+  <li>Tokenization – split text into words</li>
+  <li>(Optional) Stemming/Lemmatization</ul>
 
 <h5>Step 3: Split Data into Training and Testing Sets</h5>
 <p>Typically 80% training, 20% testing (or use cross-validation).</p>
 
 <h5>Step 4: Train the Naive Bayes Model</h5>
 <ul>
-  <li>Compute prior: $$ P(C) = \frac{\#\ \text{documents in class}\ C}{\text{total documents}} $$</li>
-  <li>Compute likelihoods \( P(w_i | C) \) with Laplace smoothing</li>
+  <li>Compute prior: P(C) = \frac{number of documents in class C}{total number of documents}</li>
+  <li>Compute likelihoods P(w_i|C) with Laplace smoothing</li>
 </ul>
 
 <h5>Step 5: Classify New Reviews</h5>

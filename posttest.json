@@ -1,0 +1,107 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What does the expression P(C|X) represent in the Naive Bayes classifier?",
+      "answers": {
+        "a": "The probability of observing the words X in any document",
+        "b": "The probability of class C occurring in the dataset",
+        "c": "The probability that the review X belongs to class C",
+        "d": "The exact count of words in class C"
+      },
+      "explanations": {
+        "a": "This describes P(X), which is not the classifier's goal.",
+        "b": "This refers to the prior probability P(C), not P(C|X).",
+        "c": "Correct! It is the posterior probability of class C given the review X.",
+        "d": "Naive Bayes uses probability, not word count alone."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following best explains why Naive Bayes multiplies the probabilities of individual words?",
+      "answers": {
+        "a": "Because each word increases the dataset size",
+        "b": "Because of the conditional independence assumption",
+        "c": "Because it improves vocabulary coverage",
+        "d": "Because multiplying probabilities improves accuracy automatically"
+      },
+      "explanations": {
+        "a": "Dataset size is unrelated to probability calculation.",
+        "b": "Correct! Naive Bayes assumes words are independent given the class, enabling multiplication.",
+        "c": "Vocabulary coverage is unrelated to multiplication.",
+        "d": "Multiplication is mathematically required, not for automatic accuracy."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What problem does Laplace smoothing specifically solve in Naive Bayes?",
+      "answers": {
+        "a": "Preventing underflow when multiplying many probabilities",
+        "b": "Assigning a non-zero probability to words not seen in the training data",
+        "c": "Ensuring all classes have equal probability",
+        "d": "Reducing the total number of features"
+      },
+      "explanations": {
+        "a": "Using log probabilities solves underflow, not Laplace smoothing.",
+        "b": "Correct! Laplace smoothing prevents zero probability for unseen words.",
+        "c": "Class balancing is unrelated to smoothing.",
+        "d": "Laplace smoothing does not change the feature count."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Why are log probabilities used instead of direct multiplication in Naive Bayes?",
+      "answers": {
+        "a": "To simplify the model by removing all probabilities",
+        "b": "To convert classification into a clustering problem",
+        "c": "To avoid extremely small values that occur during probability multiplication",
+        "d": "To increase the overall classification speed"
+      },
+      "explanations": {
+        "a": "Log does not remove probabilities.",
+        "b": "Classification and clustering are unrelated processes.",
+        "c": "Correct! Log transformation prevents numerical underflow from small probabilities.",
+        "d": "Speed improvement is not the primary purpose."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which preprocessing step most directly improves Naive Bayes’ ability to analyze sentiment?",
+      "answers": {
+        "a": "Removing stopwords to reduce noisy, non-informative words",
+        "b": "Alphabetically sorting every sentence",
+        "c": "Using emojis to replace all punctuation",
+        "d": "Increasing the number of capital letters"
+      },
+      "explanations": {
+        "a": "Correct! Removing stopwords improves signal-to-noise ratio.",
+        "b": "Sorting words changes meaning and has no value.",
+        "c": "Emoji substitution is not standard preprocessing.",
+        "d": "Capitalization does not impact classification."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If the model predicts a negative review correctly, which term describes this outcome?",
+      "answers": {
+        "a": "True Positive",
+        "b": "True Negative",
+        "c": "False Positive",
+        "d": "False Negative"
+      },
+      "explanations": {
+        "a": "True Positive refers to correctly predicting a positive review.",
+        "b": "Correct! True Negative means the model correctly predicted a negative review.",
+        "c": "A False Positive means a negative review was predicted as positive.",
+        "d": "A False Negative means a positive review was predicted as negative."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

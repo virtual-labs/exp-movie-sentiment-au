@@ -1,0 +1,107 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What does P(A|B) represent in Bayes' Theorem?",
+      "answers": {
+        "a": "The prior probability of event A",
+        "b": "The probability of event B occurring",
+        "c": "The probability of event A given event B",
+        "d": "The likelihood of event B given A"
+      },
+      "explanations": {
+        "a": "P(A) is the prior probability.",
+        "b": "This is the probability of evidence, not the posterior.",
+        "c": "Correct! P(A|B) is the posterior probability.",
+        "d": "This describes P(B|A), not P(A|B)."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why is Naive Bayes considered 'naive'?",
+      "answers": {
+        "a": "It requires very small datasets",
+        "b": "It assumes all features are dependent on each other",
+        "c": "It assumes all features are independent of each other",
+        "d": "It ignores probabilities during classification"
+      },
+      "explanations": {
+        "a": "Dataset size is not related to the naive assumption.",
+        "b": "This is the opposite of Naive Bayes' assumption.",
+        "c": "Correct! Naive Bayes assumes feature independence.",
+        "d": "It uses probabilities extensively."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What problem does Laplace smoothing solve in Naive Bayes?",
+      "answers": {
+        "a": "Overfitting caused by too much training data",
+        "b": "Zero probability for words not seen in the training data",
+        "c": "Slow training speed",
+        "d": "Incorrect ordering of word tokens"
+      },
+      "explanations": {
+        "a": "Laplace smoothing does not address overfitting.",
+        "b": "Correct! It prevents zero probabilities for unseen words.",
+        "c": "Speed is unrelated to smoothing.",
+        "d": "Token ordering is not part of smoothing."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Why are log probabilities used in Naive Bayes?",
+      "answers": {
+        "a": "To make calculations faster than normal probability",
+        "b": "To convert numbers into text",
+        "c": "To avoid numerical underflow from multiplying many small probabilities",
+        "d": "Because logs improve text preprocessing"
+      },
+      "explanations": {
+        "a": "Speed is not the main reason.",
+        "b": "Logs do not convert numbers to text.",
+        "c": "Correct! Logs prevent very small numbers from becoming zero.",
+        "d": "Logs have no role in preprocessing."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following is an important text preprocessing step for Naive Bayes?",
+      "answers": {
+        "a": "Adding new random words to the text",
+        "b": "Removing stopwords such as 'the', 'is', and 'in'",
+        "c": "Encrypting the entire text",
+        "d": "Translating the text into another language"
+      },
+      "explanations": {
+        "a": "Adding random words damages model accuracy.",
+        "b": "Correct! Removing stopwords improves model performance.",
+        "c": "Encryption is unrelated to preprocessing.",
+        "d": "Translation is not required."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What does a classifier do in machine learning?",
+      "answers": {
+        "a": "It stores and retrieves data",
+        "b": "It assigns labels to input data based on learned patterns",
+        "c": "It generates random datasets",
+        "d": "It sorts values in ascending order"
+      },
+      "explanations": {
+        "a": "Storage is not classification.",
+        "b": "Correct! Classification assigns labels.",
+        "c": "Dataset generation is separate.",
+        "d": "Sorting is not classification."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
